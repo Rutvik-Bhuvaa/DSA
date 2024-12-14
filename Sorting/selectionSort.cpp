@@ -3,14 +3,15 @@
 #include<iostream>
 using namespace std;
 
-void Print(int arr[], int size){
+void print(int arr[], int size){
     for(int i=0; i<size; i++){
         cout << arr[i] << " ";
     }
+    return;
 }
 
 void selectionSort(int arr[], int size){
-    for(int i=0; i<size; i++){
+    for(int i=0; i<size-1; i++){
             int index = i;
             for(int j=i; j<size; j++){
                 if(arr[j]<arr[index]){
@@ -23,7 +24,9 @@ void selectionSort(int arr[], int size){
             arr[i] = temp;
     }
 
-    Print(arr, size);
+    print(arr, size);
+
+    return;
 }
 
 int main(){
